@@ -1,9 +1,23 @@
 <html>
   <head>
     <title>f e m t o s e r v i c e s</title>
+    <script type="text/javascript">
+      var currRick = 1;
+      function switchRick() {
+      document.getElementById("rick"+currRick).style.display = 'none';
+      var nextRick = currRick >= 3 ? 1 : currRick+1;
+      document.getElementById("rick"+nextRick).style.display = 'block';
+      currRick = nextRick;
+      }
+      window.onload = function() {
+      setInterval(switchRick, 0.3 * 1000);
+      };
+    </script>
   </head>
   <body>
     <h1>the next wave of infrastructure</h1>
-    <img src="https://static.sched.org/a6/2233931/avatar.jpg.320x320px.jpg">
+    <img id="rick1" src="https://static.sched.org/a6/2233931/avatar.jpg.320x320px.jpg">
+    <img id="rick2" style="display: none"; src="https://static-secure.guim.co.uk/sys-images/Guardian/Pix/pixies/2013/2/22/1361552836773/Thom-Yorke-009.jpg">
+    <img id="rick3" style="display: none"; src="https://camo.githubusercontent.com/b879f7c38360aead36dffd20de53b1e8a4e3b8f7/687474703a2f2f61342e65632d696d616765732e6d79737061636563646e2e636f6d2f696d6167657330322f3135312f31326166633133343230633034373136613735633736306362653133383538362f6c2e6a7067">
   </body>
 </html>
